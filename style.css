@@ -1,61 +1,63 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-@import url(https://fonts.googleapis.com/css?family=Lobster:regular);
-@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 body{
-    background: #f1f5f8;
-    font-family: 'Poppins',sans-serif;
-}
-nav{
-    display: flex;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
     align-items: center;
-    justify-content: center;
-    height: 10vh;
-    background: #fff;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.4);
-}
-nav #logo{
-    font-size: 30px;
-    color: lightseagreen;
-    width: 50%;
-    word-spacing: 10px;
-    letter-spacing: 1px;
-}
-.color{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-    gap: 2rem;
-}
-.color h1{
-    background: #000;
-    padding: 20px 80px;
-    color: #fff;
-    letter-spacing: 1px;
-    border-radius: 15px;
-    word-spacing: 5px;
-}
-.color h1 .bg{
-    color: lightseagreen;
-    letter-spacing: 1px;
-}
-.btn{
-    background: transparent;
-    padding: 10px 35px;
-    border: 2px solid #000;
-    font-size: 20px;
+    place-content: center;
+    justify-items: center;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    background: #6E7C82;
+}
+
+h1{
+    font-size: 55px;
+    letter-spacing: 1px;
+}
+.btn, .copy{
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
+    background: transparent;
+    padding: 15px 25px;
+    border: 1px solid #000;
     border-radius: 5px;
 }
-.btn:hover{
+.copy{
+    margin-left: 30px;
+}
+.btn:hover, .copy:hover{
     background: #000;
     color: #fff;
+}
+span{
+    background-color: #fff;
+    padding: 15px 25px 15px 25px;
+    font-weight: 700;
+}
+.pop-up{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 180px;
+    background: #fff;
+    text-transform: capitalize;
+    font-size: 18px !important;
+    padding: 15px 20px;
+    font-weight: lighter;
+    transform: translateY(50%);
+    opacity: 0;
 }
